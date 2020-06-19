@@ -731,7 +731,7 @@ module.exports = (robot) ->
   robot.respond /j(?:enkins)? aliases/i, id: 'jenkins.aliases', (msg) ->
     pluginFactory(msg).listAliases()
 
-  robot.respond /j(?:enkins)? build (.*)(, (.+))?/i, id: 'jenkins.build', (msg) ->
+  robot.respond /j(?:enkins)? build (\w+)(, (.+))?/i, id: 'jenkins.build', (msg) ->
     pluginFactory(msg).build false
 
   robot.respond /j(?:enkins)? b (\d+)(, (.+))?/i, id: 'jenkins.b', (msg) ->
